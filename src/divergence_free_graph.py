@@ -2,9 +2,10 @@ import pm4py
 
 def get_divergence_free_graph(relations, div, rel):
 
-    global_dfg = {(a,b):0 for a in rel.keys() for b in rel.keys()}
-    global_start = {a:0 for a in rel.keys()}
-    global_end = {a:0 for a in rel.keys()}
+    activities = set(rel) | set(relations["ocel:activity"].unique())
+    global_dfg = {(a,b):0 for a in activities for b in activities}
+    global_start = {a:0 for a in activities}
+    global_end = {a:0 for a in activities}
 
     non_starts = []
     non_ends = []
@@ -12,12 +13,12 @@ def get_divergence_free_graph(relations, div, rel):
 
     for ot in relations["ocel:type"].unique():
 
-        sub_log = relations[relations["ocel:type"] == ot]
+        sub_log = relations[relations["ocel:type"] == ot].copy()
         local_dfg, local_start, local_end = pm4py.discover_dfg(sub_log,"ocel:activity",
                                                 "ocel:timestamp","ocel:oid")
 
         for key,value in local_dfg.items():
-            if value and not (ot in div[key[0]] & div[key[1]]):
+            if value and not (ot in div.get(key[0], set()) & div.get(key[1], set())):
                 global_dfg[key] += value
 
         for key,value in local_start.items():

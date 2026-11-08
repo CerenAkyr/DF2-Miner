@@ -1,0 +1,270 @@
+{
+  "eventTypes": [
+    {
+      "name": "REQUEST",
+      "attributes": []
+    },
+    {
+      "name": "CHARGE",
+      "attributes": []
+    },
+    {
+      "name": "SENDOUT",
+      "attributes": [
+        {
+          "name": "unc::SENDOUT::type::candidates",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "REORDER",
+      "attributes": [
+        {
+          "name": "unc::REORDER::type::candidates",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "objectTypes": [
+    {
+      "name": "customer",
+      "attributes": []
+    },
+    {
+      "name": "order",
+      "attributes": []
+    },
+    {
+      "name": "item",
+      "attributes": []
+    },
+    {
+      "name": "package",
+      "attributes": []
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "type": "REQUEST",
+      "time": "2024-01-01T09:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i1",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i2",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "CHARGE",
+      "time": "2024-01-01T10:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "SENDOUT",
+      "time": "2024-01-01T11:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "p1",
+          "qualifier": "package"
+        },
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i2",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "REORDER",
+      "time": "2024-01-01T12:00:00Z",
+      "attributes": [
+        {
+          "name": "unc::REORDER::type::candidates",
+          "value": "[\"REORDER\",\"REQUEST\"]"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i1",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "REORDER",
+      "time": "2024-01-01T13:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "i3",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "REQUEST",
+      "time": "2024-01-01T14:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i3",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "SENDOUT",
+      "time": "2024-01-01T15:00:00Z",
+      "attributes": [
+        {
+          "name": "unc::SENDOUT::type::candidates",
+          "value": "[\"SENDOUT\",\"CHARGE\"]"
+        }
+      ],
+      "relationships": [
+        {
+          "objectId": "p2",
+          "qualifier": "package"
+        },
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o1",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        },
+        {
+          "objectId": "i2",
+          "qualifier": "item"
+        },
+        {
+          "objectId": "i3",
+          "qualifier": "item"
+        }
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "CHARGE",
+      "time": "2024-01-01T16:00:00Z",
+      "attributes": [],
+      "relationships": [
+        {
+          "objectId": "c1",
+          "qualifier": "customer"
+        },
+        {
+          "objectId": "o2",
+          "qualifier": "order"
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "c1",
+      "type": "customer",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "o1",
+      "type": "order",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "o2",
+      "type": "order",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "i1",
+      "type": "item",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "i2",
+      "type": "item",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "i3",
+      "type": "item",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "p1",
+      "type": "package",
+      "attributes": [],
+      "relationships": []
+    },
+    {
+      "id": "p2",
+      "type": "package",
+      "attributes": [],
+      "relationships": []
+    }
+  ]
+}

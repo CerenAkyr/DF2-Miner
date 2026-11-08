@@ -12,9 +12,8 @@ def get_interaction_patterns(relations):
     look_up_dict_activities = relations.set_index("ocel:eid").to_dict()["ocel:activity"]
     look_up_dict_objects = relations.set_index("ocel:oid").to_dict()["ocel:type"]
 
-    identifiers = relations.groupby("ocel:eid").apply(lambda
-        frame: tuple(sorted(set(frame["ocel:oid"].values)))).to_frame(
-        name="all")
+    identifiers = relations.groupby("ocel:eid")["ocel:oid"].agg(
+        lambda values: tuple(sorted(set(values)))).to_frame(name="all")
     identifiers["activity"] = [look_up_dict_activities[event_id] for event_id in identifiers.index]
 
     for activity in relations["ocel:activity"].unique():
@@ -38,7 +37,7 @@ def get_interaction_patterns(relations):
         for activity in relations["ocel:activity"].unique():
             sub_sub_identifiers = sub_identifiers[sub_identifiers["activity"] == activity]
 
-            matches = sub_sub_identifiers.groupby(object_type).apply(lambda frame: frame["all"].nunique())
+            matches = sub_sub_identifiers.groupby(object_type)["all"].nunique()
             matches = matches[[index for index in matches.index if index]]
 
             if sub_sub_identifiers[object_type].apply(lambda object_set: len(object_set)).max() > 1:

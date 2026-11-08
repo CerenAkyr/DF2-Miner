@@ -1,0 +1,3369 @@
+{
+  "schemaVersion": "1",
+  "meta": {
+    "generatedAt": "2026-10-18T11:37:42.068Z",
+    "fileName": "order-management.json",
+    "sourceFormat": "json",
+    "sampled": false,
+    "scope": "full-log",
+    "engineVersion": "0.1.0"
+  },
+  "size": {
+    "events": 21008,
+    "objects": 10840,
+    "eventTypes": {
+      "declared": 11,
+      "observed": 11
+    },
+    "objectTypes": {
+      "declared": 6,
+      "observed": 6
+    },
+    "eventAttributes": {
+      "declared": 0,
+      "observed": 0
+    },
+    "objectAttributes": {
+      "declared": 7,
+      "observed": 7
+    },
+    "e2oRelations": 147463,
+    "o2oRelations": 28391,
+    "e2oQualifiers": 11,
+    "o2oQualifiers": 9,
+    "objectAttributeValues": 18604,
+    "objectAttributeChanges": 100
+  },
+  "time": {
+    "earliest": "2023-04-03T10:08:18.000Z",
+    "latest": "2024-06-04T18:12:07.000Z",
+    "spanDays": 428.336,
+    "calendarDays": 429,
+    "activeDays": 407,
+    "idleDays": 22,
+    "eventsPerActiveDay": {
+      "count": 407,
+      "total": 21008,
+      "min": 1,
+      "p25": 3,
+      "median": 72,
+      "p75": 86,
+      "p95": 101,
+      "max": 132,
+      "mean": 51.6167,
+      "stdDev": 40.4826
+    },
+    "interArrivalSeconds": {
+      "count": 21007,
+      "total": 37008229,
+      "min": 0,
+      "p25": 128,
+      "median": 360,
+      "p75": 826,
+      "p95": 3928.8,
+      "max": 303023,
+      "mean": 1761.7094,
+      "stdDev": 8738.3503
+    },
+    "distinctTimestamps": 19941,
+    "duplicateTimestampShare": 0.0508,
+    "maxEventsPerTimestamp": 3,
+    "granularity": {
+      "day": 0,
+      "hour": 0.0045,
+      "minute": 0.0171,
+      "second": 0.9783,
+      "millisecond": 0
+    },
+    "hourOfDayUtc": [
+      12,
+      13,
+      6,
+      11,
+      16,
+      27,
+      409,
+      1426,
+      2181,
+      2415,
+      2069,
+      1439,
+      1555,
+      2042,
+      2324,
+      1937,
+      1241,
+      702,
+      387,
+      289,
+      261,
+      116,
+      38,
+      92
+    ],
+    "dayOfWeekUtc": [
+      178,
+      4203,
+      4524,
+      4221,
+      4077,
+      3718,
+      87
+    ],
+    "outOfOrderEvents": 10,
+    "invalidTimestamps": 0
+  },
+  "eventTypes": [
+    {
+      "name": "confirm order",
+      "declared": true,
+      "events": 2000,
+      "share": 0.0952,
+      "firstOccurrence": "2023-04-04T14:09:41.000Z",
+      "lastOccurrence": "2024-03-26T13:19:17.000Z",
+      "objectsPerEvent": {
+        "count": 2000,
+        "total": 20639,
+        "min": 5,
+        "p25": 7,
+        "median": 9,
+        "p75": 13,
+        "p95": 17,
+        "max": 28,
+        "mean": 10.3195,
+        "stdDev": 3.549
+      },
+      "objectTypes": [
+        "customers",
+        "employees",
+        "items",
+        "orders",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "create package",
+      "declared": true,
+      "events": 1128,
+      "share": 0.0537,
+      "firstOccurrence": "2023-04-07T23:00:00.000Z",
+      "lastOccurrence": "2024-05-31T23:00:00.000Z",
+      "objectsPerEvent": {
+        "count": 1128,
+        "total": 16333,
+        "min": 4,
+        "p25": 10,
+        "median": 14,
+        "p75": 18,
+        "p95": 25,
+        "max": 36,
+        "mean": 14.4796,
+        "stdDev": 5.753
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "packages",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "failed delivery",
+      "declared": true,
+      "events": 311,
+      "share": 0.0148,
+      "firstOccurrence": "2023-04-17T14:13:05.000Z",
+      "lastOccurrence": "2024-04-12T15:28:01.000Z",
+      "objectsPerEvent": {
+        "count": 311,
+        "total": 4364,
+        "min": 4,
+        "p25": 10,
+        "median": 13,
+        "p75": 17,
+        "p95": 26,
+        "max": 36,
+        "mean": 14.0322,
+        "stdDev": 6.0824
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "packages",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "item out of stock",
+      "declared": true,
+      "events": 1544,
+      "share": 0.0735,
+      "firstOccurrence": "2023-04-04T13:42:47.000Z",
+      "lastOccurrence": "2024-03-27T19:21:24.000Z",
+      "objectsPerEvent": {
+        "count": 1544,
+        "total": 4632,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 3,
+        "max": 3,
+        "mean": 3,
+        "stdDev": 0
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "package delivered",
+      "declared": true,
+      "events": 1128,
+      "share": 0.0537,
+      "firstOccurrence": "2023-04-11T09:03:27.000Z",
+      "lastOccurrence": "2024-06-03T10:17:54.000Z",
+      "objectsPerEvent": {
+        "count": 1128,
+        "total": 16333,
+        "min": 4,
+        "p25": 10,
+        "median": 14,
+        "p75": 18,
+        "p95": 25,
+        "max": 36,
+        "mean": 14.4796,
+        "stdDev": 5.753
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "packages",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "pay order",
+      "declared": true,
+      "events": 2000,
+      "share": 0.0952,
+      "firstOccurrence": "2023-04-05T15:28:14.000Z",
+      "lastOccurrence": "2024-06-04T18:12:07.000Z",
+      "objectsPerEvent": {
+        "count": 2000,
+        "total": 16639,
+        "min": 3,
+        "p25": 5,
+        "median": 7,
+        "p75": 11,
+        "p95": 15,
+        "max": 26,
+        "mean": 8.3195,
+        "stdDev": 3.549
+      },
+      "objectTypes": [
+        "items",
+        "orders",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "payment reminder",
+      "declared": true,
+      "events": 566,
+      "share": 0.0269,
+      "firstOccurrence": "2023-04-25T13:27:08.000Z",
+      "lastOccurrence": "2024-05-20T20:17:28.000Z",
+      "objectsPerEvent": {
+        "count": 566,
+        "total": 4814,
+        "min": 3,
+        "p25": 6,
+        "median": 7,
+        "p75": 11,
+        "p95": 15,
+        "max": 24,
+        "mean": 8.5053,
+        "stdDev": 3.6964
+      },
+      "objectTypes": [
+        "items",
+        "orders",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "pick item",
+      "declared": true,
+      "events": 7659,
+      "share": 0.3646,
+      "firstOccurrence": "2023-04-03T11:21:49.000Z",
+      "lastOccurrence": "2024-04-18T14:53:39.000Z",
+      "objectsPerEvent": {
+        "count": 7659,
+        "total": 22977,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 3,
+        "max": 3,
+        "mean": 3,
+        "stdDev": 0
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "place order",
+      "declared": true,
+      "events": 2000,
+      "share": 0.0952,
+      "firstOccurrence": "2023-04-03T10:08:18.000Z",
+      "lastOccurrence": "2024-03-23T05:16:03.000Z",
+      "objectsPerEvent": {
+        "count": 2000,
+        "total": 18639,
+        "min": 4,
+        "p25": 6,
+        "median": 8,
+        "p75": 12,
+        "p95": 16,
+        "max": 27,
+        "mean": 9.3195,
+        "stdDev": 3.549
+      },
+      "objectTypes": [
+        "customers",
+        "items",
+        "orders",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "reorder item",
+      "declared": true,
+      "events": 1544,
+      "share": 0.0735,
+      "firstOccurrence": "2023-04-05T09:26:59.000Z",
+      "lastOccurrence": "2024-03-29T15:12:14.000Z",
+      "objectsPerEvent": {
+        "count": 1544,
+        "total": 4632,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 3,
+        "max": 3,
+        "mean": 3,
+        "stdDev": 0
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "products"
+      ],
+      "attributes": []
+    },
+    {
+      "name": "send package",
+      "declared": true,
+      "events": 1128,
+      "share": 0.0537,
+      "firstOccurrence": "2023-04-10T08:40:42.000Z",
+      "lastOccurrence": "2024-06-03T08:20:59.000Z",
+      "objectsPerEvent": {
+        "count": 1128,
+        "total": 17383,
+        "min": 4,
+        "p25": 11,
+        "median": 15,
+        "p75": 19,
+        "p95": 26,
+        "max": 37,
+        "mean": 15.4105,
+        "stdDev": 5.7588
+      },
+      "objectTypes": [
+        "employees",
+        "items",
+        "packages",
+        "products"
+      ],
+      "attributes": []
+    }
+  ],
+  "objectTypes": [
+    {
+      "name": "customers",
+      "declared": true,
+      "objects": 15,
+      "share": 0.0014,
+      "eventsPerObject": {
+        "count": 15,
+        "total": 4000,
+        "min": 206,
+        "p25": 251,
+        "median": 262,
+        "p75": 291,
+        "p95": 298.4,
+        "max": 304,
+        "mean": 266.6667,
+        "stdDev": 25.5256
+      },
+      "eventTypesPerObject": {
+        "count": 15,
+        "total": 30,
+        "min": 2,
+        "p25": 2,
+        "median": 2,
+        "p75": 2,
+        "p95": 2,
+        "max": 2,
+        "mean": 2,
+        "stdDev": 0
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 15,
+        "total": 0,
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0,
+        "stdDev": 0
+      },
+      "attributes": []
+    },
+    {
+      "name": "employees",
+      "declared": true,
+      "objects": 18,
+      "share": 0.0017,
+      "eventsPerObject": {
+        "count": 18,
+        "total": 17492,
+        "min": 267,
+        "p25": 420.5,
+        "median": 470.5,
+        "p75": 1821,
+        "p95": 1896.65,
+        "max": 1906,
+        "mean": 971.7778,
+        "stdDev": 696.9246
+      },
+      "eventTypesPerObject": {
+        "count": 18,
+        "total": 58,
+        "min": 1,
+        "p25": 1.5,
+        "median": 3,
+        "p75": 5,
+        "p95": 5,
+        "max": 5,
+        "mean": 3.2222,
+        "stdDev": 1.6178
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 18,
+        "total": 0,
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0,
+        "stdDev": 0
+      },
+      "attributes": [
+        "role"
+      ]
+    },
+    {
+      "name": "items",
+      "declared": true,
+      "objects": 7659,
+      "share": 0.7065,
+      "eventsPerObject": {
+        "count": 7659,
+        "total": 60935,
+        "min": 7,
+        "p25": 7,
+        "median": 7,
+        "p75": 9,
+        "p95": 10,
+        "max": 16,
+        "mean": 7.956,
+        "stdDev": 1.2069
+      },
+      "eventTypesPerObject": {
+        "count": 7659,
+        "total": 59780,
+        "min": 7,
+        "p25": 7,
+        "median": 7,
+        "p75": 8,
+        "p95": 10,
+        "max": 11,
+        "mean": 7.8052,
+        "stdDev": 0.9817
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 7659,
+        "total": 0,
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0,
+        "stdDev": 0
+      },
+      "attributes": [
+        "price",
+        "weight"
+      ]
+    },
+    {
+      "name": "orders",
+      "declared": true,
+      "objects": 2000,
+      "share": 0.1845,
+      "eventsPerObject": {
+        "count": 2000,
+        "total": 6566,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 4,
+        "max": 7,
+        "mean": 3.283,
+        "stdDev": 0.5941
+      },
+      "eventTypesPerObject": {
+        "count": 2000,
+        "total": 6443,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 4,
+        "max": 4,
+        "mean": 3.2215,
+        "stdDev": 0.4153
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 2000,
+        "total": 0,
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0,
+        "stdDev": 0
+      },
+      "attributes": [
+        "price"
+      ]
+    },
+    {
+      "name": "packages",
+      "declared": true,
+      "objects": 1128,
+      "share": 0.1041,
+      "eventsPerObject": {
+        "count": 1128,
+        "total": 3695,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 5,
+        "max": 10,
+        "mean": 3.2757,
+        "stdDev": 0.6824
+      },
+      "eventTypesPerObject": {
+        "count": 1128,
+        "total": 3598,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 4,
+        "max": 4,
+        "mean": 3.1897,
+        "stdDev": 0.3921
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 1128,
+        "total": 0,
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0,
+        "stdDev": 0
+      },
+      "attributes": [
+        "weight"
+      ]
+    },
+    {
+      "name": "products",
+      "declared": true,
+      "objects": 20,
+      "share": 0.0018,
+      "eventsPerObject": {
+        "count": 20,
+        "total": 54697,
+        "min": 2439,
+        "p25": 2679,
+        "median": 2716,
+        "p75": 2819,
+        "p95": 2934.9,
+        "max": 3009,
+        "mean": 2734.85,
+        "stdDev": 133.1996
+      },
+      "eventTypesPerObject": {
+        "count": 20,
+        "total": 220,
+        "min": 11,
+        "p25": 11,
+        "median": 11,
+        "p75": 11,
+        "p95": 11,
+        "max": 11,
+        "mean": 11,
+        "stdDev": 0
+      },
+      "objectsWithoutEvents": 0,
+      "attributeChangesPerObject": {
+        "count": 20,
+        "total": 100,
+        "min": 5,
+        "p25": 5,
+        "median": 5,
+        "p75": 5,
+        "p95": 5,
+        "max": 5,
+        "mean": 5,
+        "stdDev": 0
+      },
+      "attributes": [
+        "price",
+        "weight"
+      ]
+    }
+  ],
+  "relations": {
+    "e2o": {
+      "relations": 147463,
+      "objectsPerEvent": {
+        "count": 21008,
+        "total": 147385,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 10,
+        "p95": 18,
+        "max": 37,
+        "mean": 7.0157,
+        "stdDev": 5.5099
+      },
+      "eventsPerObject": {
+        "count": 10840,
+        "total": 147385,
+        "min": 3,
+        "p25": 4,
+        "median": 7,
+        "p75": 8,
+        "p95": 10,
+        "max": 3009,
+        "mean": 13.5964,
+        "stdDev": 127.163
+      },
+      "eventsWithoutObjects": 0,
+      "objectsWithoutEvents": 0,
+      "qualifiers": [
+        {
+          "name": "item",
+          "relations": 60935,
+          "share": 0.4132
+        },
+        {
+          "name": "product",
+          "relations": 54697,
+          "share": 0.3709
+        },
+        {
+          "name": "employee",
+          "relations": 10747,
+          "share": 0.0729
+        },
+        {
+          "name": "order",
+          "relations": 6566,
+          "share": 0.0445
+        },
+        {
+          "name": "customer",
+          "relations": 4000,
+          "share": 0.0271
+        },
+        {
+          "name": "shipped package",
+          "relations": 2567,
+          "share": 0.0174
+        },
+        {
+          "name": "shipper",
+          "relations": 2567,
+          "share": 0.0174
+        },
+        {
+          "name": "sales person",
+          "relations": 2000,
+          "share": 0.0136
+        },
+        {
+          "name": "creates",
+          "relations": 1128,
+          "share": 0.0076
+        },
+        {
+          "name": "forwarder",
+          "relations": 1128,
+          "share": 0.0076
+        },
+        {
+          "name": "packer",
+          "relations": 1128,
+          "share": 0.0076
+        }
+      ]
+    },
+    "o2o": {
+      "relations": 28391,
+      "targetsPerObject": {
+        "count": 10802,
+        "total": 28391,
+        "min": 1,
+        "p25": 1,
+        "median": 1,
+        "p75": 2,
+        "p95": 10,
+        "max": 154,
+        "mean": 2.6283,
+        "stdDev": 5.8376
+      },
+      "selfReferences": 0,
+      "qualifiers": [
+        {
+          "name": "comprises",
+          "relations": 7659,
+          "share": 0.2698
+        },
+        {
+          "name": "contains",
+          "relations": 7659,
+          "share": 0.2698
+        },
+        {
+          "name": "is a",
+          "relations": 7659,
+          "share": 0.2698
+        },
+        {
+          "name": "places",
+          "relations": 2000,
+          "share": 0.0704
+        },
+        {
+          "name": "forwarded by",
+          "relations": 1128,
+          "share": 0.0397
+        },
+        {
+          "name": "packed by",
+          "relations": 1128,
+          "share": 0.0397
+        },
+        {
+          "name": "shipped by",
+          "relations": 1128,
+          "share": 0.0397
+        },
+        {
+          "name": "primarySalesRep",
+          "relations": 15,
+          "share": 0.0005
+        },
+        {
+          "name": "secondarySalesRep",
+          "relations": 15,
+          "share": 0.0005
+        }
+      ]
+    },
+    "eventObjectTypeMatrix": [
+      {
+        "eventType": "confirm order",
+        "objectType": "customers",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "confirm order",
+        "objectType": "employees",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "confirm order",
+        "objectType": "items",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 3.8295,
+        "maxObjectsPerEvent": 16
+      },
+      {
+        "eventType": "confirm order",
+        "objectType": "orders",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "confirm order",
+        "objectType": "products",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 6980,
+        "objectsPerEvent": 3.49,
+        "maxObjectsPerEvent": 11
+      },
+      {
+        "eventType": "create package",
+        "objectType": "employees",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 1128,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "create package",
+        "objectType": "items",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 6.7899,
+        "maxObjectsPerEvent": 20
+      },
+      {
+        "eventType": "create package",
+        "objectType": "packages",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 1128,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "create package",
+        "objectType": "products",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 6418,
+        "objectsPerEvent": 5.6897,
+        "maxObjectsPerEvent": 14
+      },
+      {
+        "eventType": "failed delivery",
+        "objectType": "employees",
+        "events": 311,
+        "eventShare": 1,
+        "relations": 311,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "failed delivery",
+        "objectType": "items",
+        "events": 311,
+        "eventShare": 1,
+        "relations": 2020,
+        "objectsPerEvent": 6.4952,
+        "maxObjectsPerEvent": 20
+      },
+      {
+        "eventType": "failed delivery",
+        "objectType": "packages",
+        "events": 311,
+        "eventShare": 1,
+        "relations": 311,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "failed delivery",
+        "objectType": "products",
+        "events": 311,
+        "eventShare": 1,
+        "relations": 1722,
+        "objectsPerEvent": 5.537,
+        "maxObjectsPerEvent": 14
+      },
+      {
+        "eventType": "item out of stock",
+        "objectType": "employees",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "item out of stock",
+        "objectType": "items",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "item out of stock",
+        "objectType": "products",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "package delivered",
+        "objectType": "employees",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 1128,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "package delivered",
+        "objectType": "items",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 6.7899,
+        "maxObjectsPerEvent": 20
+      },
+      {
+        "eventType": "package delivered",
+        "objectType": "packages",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 1128,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "package delivered",
+        "objectType": "products",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 6418,
+        "objectsPerEvent": 5.6897,
+        "maxObjectsPerEvent": 14
+      },
+      {
+        "eventType": "pay order",
+        "objectType": "items",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 3.8295,
+        "maxObjectsPerEvent": 16
+      },
+      {
+        "eventType": "pay order",
+        "objectType": "orders",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "pay order",
+        "objectType": "products",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 6980,
+        "objectsPerEvent": 3.49,
+        "maxObjectsPerEvent": 11
+      },
+      {
+        "eventType": "payment reminder",
+        "objectType": "items",
+        "events": 566,
+        "eventShare": 1,
+        "relations": 2214,
+        "objectsPerEvent": 3.9117,
+        "maxObjectsPerEvent": 13
+      },
+      {
+        "eventType": "payment reminder",
+        "objectType": "orders",
+        "events": 566,
+        "eventShare": 1,
+        "relations": 566,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "payment reminder",
+        "objectType": "products",
+        "events": 566,
+        "eventShare": 1,
+        "relations": 2034,
+        "objectsPerEvent": 3.5936,
+        "maxObjectsPerEvent": 11
+      },
+      {
+        "eventType": "pick item",
+        "objectType": "employees",
+        "events": 7659,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "pick item",
+        "objectType": "items",
+        "events": 7659,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "pick item",
+        "objectType": "products",
+        "events": 7659,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "place order",
+        "objectType": "customers",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "place order",
+        "objectType": "items",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 3.8295,
+        "maxObjectsPerEvent": 16
+      },
+      {
+        "eventType": "place order",
+        "objectType": "orders",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 2000,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "place order",
+        "objectType": "products",
+        "events": 2000,
+        "eventShare": 1,
+        "relations": 6980,
+        "objectsPerEvent": 3.49,
+        "maxObjectsPerEvent": 11
+      },
+      {
+        "eventType": "reorder item",
+        "objectType": "employees",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "reorder item",
+        "objectType": "items",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "reorder item",
+        "objectType": "products",
+        "events": 1544,
+        "eventShare": 1,
+        "relations": 1544,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "send package",
+        "objectType": "employees",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 2178,
+        "objectsPerEvent": 1.9309,
+        "maxObjectsPerEvent": 2
+      },
+      {
+        "eventType": "send package",
+        "objectType": "items",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 7659,
+        "objectsPerEvent": 6.7899,
+        "maxObjectsPerEvent": 20
+      },
+      {
+        "eventType": "send package",
+        "objectType": "packages",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 1128,
+        "objectsPerEvent": 1,
+        "maxObjectsPerEvent": 1
+      },
+      {
+        "eventType": "send package",
+        "objectType": "products",
+        "events": 1128,
+        "eventShare": 1,
+        "relations": 6418,
+        "objectsPerEvent": 5.6897,
+        "maxObjectsPerEvent": 14
+      }
+    ],
+    "objectObjectTypeMatrix": [
+      {
+        "sourceType": "customers",
+        "targetType": "employees",
+        "relations": 30,
+        "qualifiers": [
+          "primarySalesRep",
+          "secondarySalesRep"
+        ]
+      },
+      {
+        "sourceType": "customers",
+        "targetType": "orders",
+        "relations": 2000,
+        "qualifiers": [
+          "places"
+        ]
+      },
+      {
+        "sourceType": "items",
+        "targetType": "products",
+        "relations": 7659,
+        "qualifiers": [
+          "is a"
+        ]
+      },
+      {
+        "sourceType": "orders",
+        "targetType": "items",
+        "relations": 7659,
+        "qualifiers": [
+          "comprises"
+        ]
+      },
+      {
+        "sourceType": "packages",
+        "targetType": "employees",
+        "relations": 3384,
+        "qualifiers": [
+          "forwarded by",
+          "packed by",
+          "shipped by"
+        ]
+      },
+      {
+        "sourceType": "packages",
+        "targetType": "items",
+        "relations": 7659,
+        "qualifiers": [
+          "contains"
+        ]
+      }
+    ],
+    "connectivity": {
+      "objectsInGraph": 10840,
+      "components": 1,
+      "largestComponentSize": 10840,
+      "largestComponentShare": 1
+    }
+  },
+  "behavior": [
+    {
+      "objectType": "customers",
+      "objectsWithEvents": 15,
+      "traceLength": {
+        "count": 15,
+        "total": 4000,
+        "min": 206,
+        "p25": 251,
+        "median": 262,
+        "p75": 291,
+        "p95": 298.4,
+        "max": 304,
+        "mean": 266.6667,
+        "stdDev": 25.5256
+      },
+      "lifecycleDurationSeconds": {
+        "count": 15,
+        "total": 452927616,
+        "min": 29173963,
+        "p25": 30022225.5,
+        "median": 30280637,
+        "p75": 30496191,
+        "p95": 30613140.8,
+        "max": 30661753,
+        "mean": 30195174.4,
+        "stdDev": 409623.9236
+      },
+      "variants": 15,
+      "variantEntropyBits": 3.9069,
+      "normalizedVariantEntropy": 1,
+      "topVariants": [
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 248,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order"
+          ],
+          "length": 256,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order"
+          ],
+          "length": 272,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order"
+          ],
+          "length": 252,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 280,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 296,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 304,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order"
+          ],
+          "length": 290,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 262,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order"
+          ],
+          "length": 206,
+          "objects": 1,
+          "share": 0.0667,
+          "truncated": true
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "place order",
+          "objects": 15,
+          "share": 1
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "confirm order",
+          "objects": 15,
+          "share": 1
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 4,
+        "relations": 3985,
+        "topPairs": [
+          {
+            "from": "place order",
+            "to": "confirm order",
+            "count": 1495
+          },
+          {
+            "from": "confirm order",
+            "to": "place order",
+            "count": 1480
+          },
+          {
+            "from": "confirm order",
+            "to": "confirm order",
+            "count": 505
+          },
+          {
+            "from": "place order",
+            "to": "place order",
+            "count": 505
+          }
+        ]
+      }
+    },
+    {
+      "objectType": "employees",
+      "objectsWithEvents": 18,
+      "traceLength": {
+        "count": 18,
+        "total": 17492,
+        "min": 267,
+        "p25": 420.5,
+        "median": 470.5,
+        "p75": 1821,
+        "p95": 1896.65,
+        "max": 1906,
+        "mean": 971.7778,
+        "stdDev": 696.9246
+      },
+      "lifecycleDurationSeconds": {
+        "count": 18,
+        "total": 607078317,
+        "min": 30574322,
+        "p25": 30924230.75,
+        "median": 34546287.5,
+        "p75": 35490440.75,
+        "p95": 36326642.1,
+        "max": 36512566,
+        "mean": 33726573.1667,
+        "stdDev": 2194875.9096
+      },
+      "variants": 18,
+      "variantEntropyBits": 4.1699,
+      "normalizedVariantEntropy": 1,
+      "topVariants": [
+        {
+          "activities": [
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order"
+          ],
+          "length": 267,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order"
+          ],
+          "length": 305,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order"
+          ],
+          "length": 454,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order"
+          ],
+          "length": 461,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order",
+            "confirm order"
+          ],
+          "length": 513,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "item out of stock",
+            "reorder item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "reorder item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "item out of stock",
+            "reorder item",
+            "pick item",
+            "create package",
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "reorder item",
+            "pick item"
+          ],
+          "length": 1895,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "pick item",
+            "reorder item",
+            "reorder item",
+            "item out of stock",
+            "item out of stock",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "create package",
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "pick item",
+            "send package",
+            "pick item",
+            "pick item",
+            "reorder item",
+            "pick item"
+          ],
+          "length": 1853,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "pick item",
+            "item out of stock",
+            "reorder item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "create package",
+            "send package",
+            "reorder item",
+            "pick item",
+            "reorder item",
+            "reorder item",
+            "pick item",
+            "item out of stock",
+            "item out of stock",
+            "pick item",
+            "send package",
+            "create package",
+            "reorder item",
+            "pick item",
+            "create package",
+            "pick item",
+            "pick item"
+          ],
+          "length": 1766,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "reorder item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "create package",
+            "send package",
+            "send package",
+            "send package",
+            "pick item",
+            "pick item"
+          ],
+          "length": 1906,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "pick item",
+            "pick item",
+            "pick item",
+            "item out of stock",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "reorder item",
+            "pick item",
+            "pick item",
+            "pick item",
+            "reorder item",
+            "pick item",
+            "reorder item",
+            "reorder item",
+            "send package",
+            "item out of stock",
+            "pick item",
+            "create package",
+            "item out of stock",
+            "create package"
+          ],
+          "length": 1828,
+          "objects": 1,
+          "share": 0.0556,
+          "truncated": true
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "pick item",
+          "objects": 7,
+          "share": 0.3889
+        },
+        {
+          "name": "send package",
+          "objects": 6,
+          "share": 0.3333
+        },
+        {
+          "name": "confirm order",
+          "objects": 5,
+          "share": 0.2778
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "package delivered",
+          "objects": 6,
+          "share": 0.3333
+        },
+        {
+          "name": "confirm order",
+          "objects": 5,
+          "share": 0.2778
+        },
+        {
+          "name": "create package",
+          "objects": 5,
+          "share": 0.2778
+        },
+        {
+          "name": "send package",
+          "objects": 2,
+          "share": 0.1111
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 34,
+        "relations": 17474,
+        "topPairs": [
+          {
+            "from": "pick item",
+            "to": "pick item",
+            "count": 4545
+          },
+          {
+            "from": "confirm order",
+            "to": "confirm order",
+            "count": 1995
+          },
+          {
+            "from": "pick item",
+            "to": "item out of stock",
+            "count": 934
+          },
+          {
+            "from": "reorder item",
+            "to": "pick item",
+            "count": 920
+          },
+          {
+            "from": "pick item",
+            "to": "reorder item",
+            "count": 914
+          },
+          {
+            "from": "item out of stock",
+            "to": "pick item",
+            "count": 888
+          },
+          {
+            "from": "package delivered",
+            "to": "send package",
+            "count": 774
+          },
+          {
+            "from": "create package",
+            "to": "pick item",
+            "count": 723
+          },
+          {
+            "from": "send package",
+            "to": "package delivered",
+            "count": 698
+          },
+          {
+            "from": "pick item",
+            "to": "create package",
+            "count": 657
+          },
+          {
+            "from": "pick item",
+            "to": "send package",
+            "count": 609
+          },
+          {
+            "from": "send package",
+            "to": "pick item",
+            "count": 576
+          },
+          {
+            "from": "send package",
+            "to": "send package",
+            "count": 379
+          },
+          {
+            "from": "package delivered",
+            "to": "package delivered",
+            "count": 268
+          },
+          {
+            "from": "reorder item",
+            "to": "reorder item",
+            "count": 194
+          }
+        ]
+      }
+    },
+    {
+      "objectType": "items",
+      "objectsWithEvents": 7659,
+      "traceLength": {
+        "count": 7659,
+        "total": 60935,
+        "min": 7,
+        "p25": 7,
+        "median": 7,
+        "p75": 9,
+        "p95": 10,
+        "max": 16,
+        "mean": 7.956,
+        "stdDev": 1.2069
+      },
+      "lifecycleDurationSeconds": {
+        "count": 7659,
+        "total": 10502446595,
+        "min": 68671,
+        "p25": 592637,
+        "median": 967803,
+        "p75": 1881595.5,
+        "p95": 3723027,
+        "max": 8082702,
+        "mean": 1371255.5941,
+        "stdDev": 1129136.2372
+      },
+      "variants": 286,
+      "variantEntropyBits": 5.417,
+      "normalizedVariantEntropy": 0.6639,
+      "topVariants": [
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered",
+            "pay order"
+          ],
+          "length": 7,
+          "objects": 1177,
+          "share": 0.1537,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pay order",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 7,
+          "objects": 596,
+          "share": 0.0778,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 8,
+          "objects": 594,
+          "share": 0.0776,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "pick item",
+            "confirm order",
+            "create package",
+            "send package",
+            "package delivered",
+            "pay order"
+          ],
+          "length": 7,
+          "objects": 585,
+          "share": 0.0764,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "pay order",
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 7,
+          "objects": 566,
+          "share": 0.0739,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "item out of stock",
+            "reorder item",
+            "pay order",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 9,
+          "objects": 262,
+          "share": 0.0342,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "pick item",
+            "confirm order",
+            "create package",
+            "send package",
+            "package delivered",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 8,
+          "objects": 240,
+          "share": 0.0313,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "pick item",
+            "confirm order",
+            "pay order",
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 7,
+          "objects": 221,
+          "share": 0.0289,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "send package",
+            "failed delivery",
+            "package delivered",
+            "pay order"
+          ],
+          "length": 8,
+          "objects": 184,
+          "share": 0.024,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "send package",
+            "pay order",
+            "package delivered"
+          ],
+          "length": 7,
+          "objects": 160,
+          "share": 0.0209,
+          "truncated": false
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "place order",
+          "objects": 7659,
+          "share": 1
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "pay order",
+          "objects": 4278,
+          "share": 0.5586
+        },
+        {
+          "name": "package delivered",
+          "objects": 3381,
+          "share": 0.4414
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 56,
+        "relations": 53276,
+        "topPairs": [
+          {
+            "from": "create package",
+            "to": "send package",
+            "count": 7100
+          },
+          {
+            "from": "send package",
+            "to": "package delivered",
+            "count": 5917
+          },
+          {
+            "from": "pick item",
+            "to": "create package",
+            "count": 5290
+          },
+          {
+            "from": "place order",
+            "to": "confirm order",
+            "count": 5232
+          },
+          {
+            "from": "confirm order",
+            "to": "pick item",
+            "count": 3528
+          },
+          {
+            "from": "package delivered",
+            "to": "pay order",
+            "count": 2562
+          },
+          {
+            "from": "place order",
+            "to": "pick item",
+            "count": 1915
+          },
+          {
+            "from": "payment reminder",
+            "to": "pay order",
+            "count": 1669
+          },
+          {
+            "from": "package delivered",
+            "to": "payment reminder",
+            "count": 1606
+          },
+          {
+            "from": "pick item",
+            "to": "confirm order",
+            "count": 1495
+          },
+          {
+            "from": "confirm order",
+            "to": "pay order",
+            "count": 1363
+          },
+          {
+            "from": "failed delivery",
+            "to": "package delivered",
+            "count": 1319
+          },
+          {
+            "from": "send package",
+            "to": "failed delivery",
+            "count": 1270
+          },
+          {
+            "from": "confirm order",
+            "to": "create package",
+            "count": 1254
+          },
+          {
+            "from": "pay order",
+            "to": "pick item",
+            "count": 1236
+          }
+        ]
+      }
+    },
+    {
+      "objectType": "orders",
+      "objectsWithEvents": 2000,
+      "traceLength": {
+        "count": 2000,
+        "total": 6566,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 4,
+        "max": 7,
+        "mean": 3.283,
+        "stdDev": 0.5941
+      },
+      "lifecycleDurationSeconds": {
+        "count": 2000,
+        "total": 2237927375,
+        "min": 6003,
+        "p25": 340974.25,
+        "median": 689776.5,
+        "p75": 1650958,
+        "p95": 3626453.9,
+        "max": 8082702,
+        "mean": 1118963.6875,
+        "stdDev": 1141546.2888
+      },
+      "variants": 5,
+      "variantEntropyBits": 0.9758,
+      "normalizedVariantEntropy": 0.4203,
+      "topVariants": [
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pay order"
+          ],
+          "length": 3,
+          "objects": 1557,
+          "share": 0.7785,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 4,
+          "objects": 344,
+          "share": 0.172,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "payment reminder",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 5,
+          "objects": 78,
+          "share": 0.039,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "payment reminder",
+            "payment reminder",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 6,
+          "objects": 18,
+          "share": 0.009,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "payment reminder",
+            "payment reminder",
+            "payment reminder",
+            "payment reminder",
+            "pay order"
+          ],
+          "length": 7,
+          "objects": 3,
+          "share": 0.0015,
+          "truncated": false
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "place order",
+          "objects": 2000,
+          "share": 1
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "pay order",
+          "objects": 2000,
+          "share": 1
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 5,
+        "relations": 4566,
+        "topPairs": [
+          {
+            "from": "place order",
+            "to": "confirm order",
+            "count": 2000
+          },
+          {
+            "from": "confirm order",
+            "to": "pay order",
+            "count": 1557
+          },
+          {
+            "from": "confirm order",
+            "to": "payment reminder",
+            "count": 443
+          },
+          {
+            "from": "payment reminder",
+            "to": "pay order",
+            "count": 443
+          },
+          {
+            "from": "payment reminder",
+            "to": "payment reminder",
+            "count": 123
+          }
+        ]
+      }
+    },
+    {
+      "objectType": "packages",
+      "objectsWithEvents": 1128,
+      "traceLength": {
+        "count": 1128,
+        "total": 3695,
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "p95": 5,
+        "max": 10,
+        "mean": 3.2757,
+        "stdDev": 0.6824
+      },
+      "lifecycleDurationSeconds": {
+        "count": 1128,
+        "total": 172611109,
+        "min": 5368,
+        "p25": 74500.5,
+        "median": 101706.5,
+        "p75": 236871,
+        "p95": 401420.65,
+        "max": 767755,
+        "mean": 153024.0328,
+        "stdDev": 119919.4764
+      },
+      "variants": 7,
+      "variantEntropyBits": 0.9439,
+      "normalizedVariantEntropy": 0.3362,
+      "topVariants": [
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 3,
+          "objects": 914,
+          "share": 0.8103,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 4,
+          "objects": 149,
+          "share": 0.1321,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 5,
+          "objects": 45,
+          "share": 0.0399,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 6,
+          "objects": 13,
+          "share": 0.0115,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 7,
+          "objects": 5,
+          "share": 0.0044,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 10,
+          "objects": 1,
+          "share": 0.0009,
+          "truncated": false
+        },
+        {
+          "activities": [
+            "create package",
+            "send package",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "failed delivery",
+            "package delivered"
+          ],
+          "length": 9,
+          "objects": 1,
+          "share": 0.0009,
+          "truncated": false
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "create package",
+          "objects": 1128,
+          "share": 1
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "package delivered",
+          "objects": 1128,
+          "share": 1
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 5,
+        "relations": 2567,
+        "topPairs": [
+          {
+            "from": "create package",
+            "to": "send package",
+            "count": 1128
+          },
+          {
+            "from": "send package",
+            "to": "package delivered",
+            "count": 914
+          },
+          {
+            "from": "failed delivery",
+            "to": "package delivered",
+            "count": 214
+          },
+          {
+            "from": "send package",
+            "to": "failed delivery",
+            "count": 214
+          },
+          {
+            "from": "failed delivery",
+            "to": "failed delivery",
+            "count": 97
+          }
+        ]
+      }
+    },
+    {
+      "objectType": "products",
+      "objectsWithEvents": 20,
+      "traceLength": {
+        "count": 20,
+        "total": 54697,
+        "min": 2439,
+        "p25": 2679,
+        "median": 2716,
+        "p75": 2819,
+        "p95": 2934.9,
+        "max": 3009,
+        "mean": 2734.85,
+        "stdDev": 133.1996
+      },
+      "lifecycleDurationSeconds": {
+        "count": 20,
+        "total": 705133678,
+        "min": 32617610,
+        "p25": 34125504,
+        "median": 35510043.5,
+        "p75": 36829970,
+        "p95": 36968487.4,
+        "max": 36992112,
+        "mean": 35256683.9,
+        "stdDev": 1440273.5279
+      },
+      "variants": 20,
+      "variantEntropyBits": 4.3219,
+      "normalizedVariantEntropy": 1,
+      "topVariants": [
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "send package",
+            "pay order",
+            "package delivered",
+            "place order",
+            "pick item",
+            "confirm order",
+            "place order",
+            "pick item",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "confirm order",
+            "pay order",
+            "create package",
+            "send package",
+            "package delivered",
+            "create package",
+            "place order"
+          ],
+          "length": 2698,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "place order",
+            "pick item",
+            "confirm order",
+            "place order",
+            "pick item",
+            "confirm order",
+            "pay order",
+            "place order",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "place order",
+            "pay order",
+            "create package",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered",
+            "confirm order",
+            "send package",
+            "package delivered"
+          ],
+          "length": 2696,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "pick item",
+            "place order",
+            "pick item",
+            "confirm order",
+            "create package",
+            "send package",
+            "package delivered",
+            "place order",
+            "create package",
+            "confirm order",
+            "send package",
+            "place order",
+            "pay order",
+            "package delivered",
+            "place order",
+            "confirm order",
+            "item out of stock",
+            "confirm order",
+            "reorder item",
+            "pay order",
+            "pick item",
+            "place order",
+            "confirm order"
+          ],
+          "length": 2439,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "pick item",
+            "pay order",
+            "place order",
+            "confirm order",
+            "place order",
+            "pick item",
+            "pick item",
+            "create package",
+            "send package",
+            "place order",
+            "confirm order",
+            "confirm order",
+            "pick item",
+            "package delivered",
+            "place order",
+            "place order",
+            "confirm order",
+            "item out of stock",
+            "confirm order",
+            "pick item",
+            "pay order"
+          ],
+          "length": 2753,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "pick item",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "place order",
+            "pay order",
+            "create package",
+            "send package",
+            "package delivered",
+            "confirm order",
+            "pay order",
+            "pick item",
+            "pay order",
+            "place order",
+            "create package",
+            "send package",
+            "pick item",
+            "package delivered",
+            "place order",
+            "confirm order"
+          ],
+          "length": 2686,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "item out of stock",
+            "pay order",
+            "reorder item",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "pick item",
+            "pay order",
+            "pick item",
+            "create package",
+            "send package",
+            "package delivered",
+            "place order",
+            "confirm order",
+            "place order",
+            "place order",
+            "confirm order",
+            "pick item",
+            "place order",
+            "pick item",
+            "create package",
+            "send package"
+          ],
+          "length": 2846,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "confirm order",
+            "place order",
+            "pay order",
+            "confirm order",
+            "pick item",
+            "place order",
+            "pick item",
+            "confirm order",
+            "create package",
+            "send package",
+            "place order",
+            "pick item",
+            "confirm order",
+            "package delivered",
+            "place order",
+            "place order",
+            "pick item",
+            "confirm order",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "create package",
+            "send package",
+            "pay order"
+          ],
+          "length": 2511,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "item out of stock",
+            "confirm order",
+            "reorder item",
+            "place order",
+            "confirm order",
+            "place order",
+            "pay order",
+            "confirm order",
+            "pick item",
+            "place order",
+            "confirm order",
+            "pick item",
+            "pick item",
+            "create package",
+            "pick item",
+            "send package",
+            "place order",
+            "pick item",
+            "pick item",
+            "confirm order",
+            "package delivered",
+            "create package",
+            "send package",
+            "package delivered"
+          ],
+          "length": 3009,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "item out of stock",
+            "pick item",
+            "reorder item",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "pick item",
+            "create package",
+            "pick item",
+            "send package",
+            "pay order",
+            "package delivered",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "create package",
+            "send package",
+            "place order",
+            "item out of stock",
+            "package delivered",
+            "pick item",
+            "reorder item",
+            "pay order"
+          ],
+          "length": 2687,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        },
+        {
+          "activities": [
+            "place order",
+            "pick item",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "place order",
+            "confirm order",
+            "item out of stock",
+            "item out of stock",
+            "reorder item",
+            "create package",
+            "send package",
+            "pick item",
+            "reorder item",
+            "place order",
+            "package delivered",
+            "confirm order",
+            "pick item",
+            "item out of stock",
+            "pay order",
+            "reorder item",
+            "pay order",
+            "pay order"
+          ],
+          "length": 2716,
+          "objects": 1,
+          "share": 0.05,
+          "truncated": true
+        }
+      ],
+      "startActivities": [
+        {
+          "name": "place order",
+          "objects": 20,
+          "share": 1
+        }
+      ],
+      "endActivities": [
+        {
+          "name": "package delivered",
+          "objects": 10,
+          "share": 0.5
+        },
+        {
+          "name": "pay order",
+          "objects": 10,
+          "share": 0.5
+        }
+      ],
+      "directlyFollows": {
+        "distinctPairs": 121,
+        "relations": 54677,
+        "topPairs": [
+          {
+            "from": "place order",
+            "to": "confirm order",
+            "count": 1372
+          },
+          {
+            "from": "create package",
+            "to": "send package",
+            "count": 1308
+          },
+          {
+            "from": "send package",
+            "to": "package delivered",
+            "count": 1184
+          },
+          {
+            "from": "create package",
+            "to": "pick item",
+            "count": 1143
+          },
+          {
+            "from": "pick item",
+            "to": "create package",
+            "count": 1101
+          },
+          {
+            "from": "confirm order",
+            "to": "pick item",
+            "count": 1083
+          },
+          {
+            "from": "pick item",
+            "to": "confirm order",
+            "count": 1032
+          },
+          {
+            "from": "pick item",
+            "to": "pick item",
+            "count": 1018
+          },
+          {
+            "from": "place order",
+            "to": "pick item",
+            "count": 1015
+          },
+          {
+            "from": "pick item",
+            "to": "place order",
+            "count": 990
+          },
+          {
+            "from": "pick item",
+            "to": "pay order",
+            "count": 979
+          },
+          {
+            "from": "pay order",
+            "to": "place order",
+            "count": 952
+          },
+          {
+            "from": "pay order",
+            "to": "pick item",
+            "count": 948
+          },
+          {
+            "from": "confirm order",
+            "to": "pay order",
+            "count": 941
+          },
+          {
+            "from": "pay order",
+            "to": "pay order",
+            "count": 922
+          }
+        ]
+      }
+    }
+  ],
+  "attributes": [
+    {
+      "kind": "object",
+      "typeName": "employees",
+      "name": "role",
+      "declaredType": "string",
+      "observedTypes": [
+        "string"
+      ],
+      "dynamic": false,
+      "values": 18,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 3,
+      "cardinalityRatio": 0.1667
+    },
+    {
+      "kind": "object",
+      "typeName": "items",
+      "name": "price",
+      "declaredType": "float",
+      "observedTypes": [
+        "float",
+        "integer"
+      ],
+      "dynamic": false,
+      "values": 7659,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 114,
+      "cardinalityRatio": 0.0149,
+      "numeric": {
+        "min": 29.99,
+        "max": 2946.5,
+        "mean": 620.4348,
+        "stdDev": 739.1576
+      }
+    },
+    {
+      "kind": "object",
+      "typeName": "items",
+      "name": "weight",
+      "declaredType": "float",
+      "observedTypes": [
+        "float"
+      ],
+      "dynamic": false,
+      "values": 7659,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 17,
+      "cardinalityRatio": 0.0022,
+      "numeric": {
+        "min": 0.166,
+        "max": 1.48,
+        "mean": 0.6095,
+        "stdDev": 0.4299
+      }
+    },
+    {
+      "kind": "object",
+      "typeName": "orders",
+      "name": "price",
+      "declaredType": "float",
+      "observedTypes": [
+        "float",
+        "integer"
+      ],
+      "dynamic": false,
+      "values": 2000,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 1810,
+      "cardinalityRatio": 0.905,
+      "numeric": {
+        "min": 36.7,
+        "max": 11241.55,
+        "mean": 2380.955,
+        "stdDev": 1831.0172
+      }
+    },
+    {
+      "kind": "object",
+      "typeName": "packages",
+      "name": "weight",
+      "declaredType": "float",
+      "observedTypes": [
+        "float",
+        "integer"
+      ],
+      "dynamic": false,
+      "values": 1128,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 1003,
+      "cardinalityRatio": 0.8892,
+      "numeric": {
+        "min": 0.166,
+        "max": 13.878,
+        "mean": 4.1386,
+        "stdDev": 2.3472
+      }
+    },
+    {
+      "kind": "object",
+      "typeName": "products",
+      "name": "price",
+      "declaredType": "float",
+      "observedTypes": [
+        "float",
+        "integer"
+      ],
+      "dynamic": true,
+      "values": 120,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 114,
+      "cardinalityRatio": 0.95,
+      "numeric": {
+        "min": 29.99,
+        "max": 2946.5,
+        "mean": 623.0908,
+        "stdDev": 744.5352
+      }
+    },
+    {
+      "kind": "object",
+      "typeName": "products",
+      "name": "weight",
+      "declaredType": "float",
+      "observedTypes": [
+        "float"
+      ],
+      "dynamic": false,
+      "values": 20,
+      "missing": 0,
+      "missingRate": 0,
+      "distinctValues": 17,
+      "cardinalityRatio": 0.85,
+      "numeric": {
+        "min": 0.166,
+        "max": 1.48,
+        "mean": 0.614,
+        "stdDev": 0.4294
+      }
+    }
+  ],
+  "quality": null
+}
